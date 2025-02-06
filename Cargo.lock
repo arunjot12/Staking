@@ -4508,6 +4508,7 @@ dependencies = [
  "pallet-im-online",
  "pallet-indices",
  "pallet-insecure-randomness-collective-flip",
+ "pallet-liquidity",
  "pallet-lottery",
  "pallet-membership",
  "pallet-message-queue",
@@ -7247,6 +7248,21 @@ dependencies = [
  "scale-info",
  "sp-core 28.0.0",
  "sp-io",
+ "sp-runtime",
+ "sp-std 14.0.0",
+]
+
+[[package]]
+name = "pallet-liquidity"
+version = "0.1.0"
+dependencies = [
+ "frame-support",
+ "frame-system",
+ "pallet-asset-conversion",
+ "pallet-assets",
+ "pallet-balances",
+ "parity-scale-codec",
+ "scale-info",
  "sp-runtime",
  "sp-std 14.0.0",
 ]

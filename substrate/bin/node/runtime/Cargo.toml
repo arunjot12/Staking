@@ -112,6 +112,7 @@ pallet-offences = { path = "../../../frame/offences", default-features = false }
 pallet-offences-benchmarking = { path = "../../../frame/offences/benchmarking", default-features = false, optional = true }
 pallet-glutton = { path = "../../../frame/glutton", default-features = false }
 pallet-preimage = { path = "../../../frame/preimage", default-features = false }
+pallet-liquidity = { path = "../../../frame/liquidity", default-features = false }
 pallet-proxy = { path = "../../../frame/proxy", default-features = false }
 pallet-insecure-randomness-collective-flip = { path = "../../../frame/insecure-randomness-collective-flip", default-features = false }
 pallet-ranked-collective = { path = "../../../frame/ranked-collective", default-features = false }
@@ -194,6 +195,7 @@ std = [
 	"pallet-example-mbm/std",
 	"pallet-example-tasks/std",
 	"pallet-fast-unstake/std",
+	"pallet-liquidity/std",
 	"pallet-glutton/std",
 	"pallet-grandpa/std",
 	"pallet-identity/std",

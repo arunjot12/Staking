@@ -1342,7 +1342,6 @@ impl pallet_tips::Config for Runtime {
 }
 
 parameter_types! {
-	pub Schedule: pallet_contracts::Schedule<Runtime> = Default::default();
 	pub CodeHashLockupDepositPercent: Perbill = Perbill::from_percent(30);
 }
 
@@ -2281,9 +2280,6 @@ mod runtime {
 	#[runtime::pallet_index(20)]
 	pub type AssetRate = pallet_asset_rate;
 
-	#[runtime::pallet_index(21)]
-	pub type Contracts = pallet_contracts;
-
 	#[runtime::pallet_index(22)]
 	pub type Sudo = pallet_sudo;
 
@@ -2517,7 +2513,6 @@ const IDENTITY_MIGRATION_KEY_LIMIT: u64 = u64::MAX;
 type Migrations = (
 	pallet_nomination_pools::migration::versioned::V6ToV7<Runtime>,
 	pallet_alliance::migration::Migration<Runtime>,
-	pallet_contracts::Migration<Runtime>,
 	pallet_identity::migration::versioned::V0ToV1<Runtime, IDENTITY_MIGRATION_KEY_LIMIT>,
 );
 
