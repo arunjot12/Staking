@@ -5807,7 +5807,7 @@ dependencies = [
  "log",
  "node-primitives",
  "node-testing",
- "parity-db",
+ "parity-db 0.5.0",
  "rand 0.8.5",
  "sc-basic-authorship",
  "sc-client-api",
@@ -7826,9 +7826,9 @@ dependencies = [
 
 [[package]]
 name = "parity-db"
-version = "0.4.12"
+version = "0.4.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "59e9ab494af9e6e813c72170f0d3c1de1500990d62c97cc05cc7576f91aa402f"
+checksum = "592a28a24b09c9dc20ac8afaa6839abc417c720afe42c12e1e4a9d6aa2508d2e"
 dependencies = [
  "blake2 0.10.6",
  "crc32fast",
@@ -7842,6 +7842,28 @@ dependencies = [
  "rand 0.8.5",
  "siphasher",
  "snap",
+ "winapi",
+]
+
+[[package]]
+name = "parity-db"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "01f25df2bcb0aa931f200c5362b3329f51e6e404046ff9628cf4aa13affb5664"
+dependencies = [
+ "blake2 0.10.6",
+ "crc32fast",
+ "fs2",
+ "hex",
+ "libc",
+ "log",
+ "lz4",
+ "memmap2 0.5.10",
+ "parking_lot 0.12.1",
+ "rand 0.8.5",
+ "siphasher",
+ "snap",
+ "winapi",
 ]
 
 [[package]]
@@ -9584,7 +9606,7 @@ dependencies = [
  "kvdb-rocksdb",
  "linked-hash-map",
  "log",
- "parity-db",
+ "parity-db 0.4.13",
  "parity-scale-codec",
  "parking_lot 0.12.1",
  "quickcheck",
@@ -10568,7 +10590,7 @@ version = "10.0.0"
 dependencies = [
  "env_logger 0.11.3",
  "log",
- "parity-db",
+ "parity-db 0.4.13",
  "parking_lot 0.12.1",
  "sc-client-api",
  "sc-keystore",
