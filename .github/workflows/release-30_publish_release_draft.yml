@@ -52,7 +52,7 @@ jobs:
           fi
 
       - name: Upload ${{ matrix.binary }} binary
-        uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4.3.1
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
         with:
           name: ${{ matrix.binary }}
           path: target/production/${{ matrix.binary }}
@@ -110,7 +110,7 @@ jobs:
           ./scripts/release/build-changelogs.sh
 
       - name: Archive artifact context.json
-        uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4.3.1
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
         with:
           name: release-notes-context
           path: |
