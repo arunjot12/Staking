@@ -1345,6 +1345,12 @@ parameter_types! {
 	pub CodeHashLockupDepositPercent: Perbill = Perbill::from_percent(30);
 }
 
+impl pallet_liquidity::Config for Runtime{
+	type RuntimeEvent = RuntimeEvent;
+	type Currency = Balances;
+	type PalletId = NominationPoolsPalletId;
+}
+
 impl pallet_sudo::Config for Runtime {
 	type RuntimeEvent = RuntimeEvent;
 	type RuntimeCall = RuntimeCall;
@@ -1604,6 +1610,29 @@ parameter_types! {
 }
 
 impl pallet_assets::Config<Instance1> for Runtime {
+	type RuntimeEvent = RuntimeEvent;
+	type Balance = u128;
+	type AssetId = u32;
+	type AssetIdParameter = codec::Compact<u32>;
+	type Currency = Balances;
+	type CreateOrigin = AsEnsureOriginWithArg<EnsureSigned<AccountId>>;
+	type ForceOrigin = EnsureRoot<AccountId>;
+	type AssetDeposit = AssetDeposit;
+	type AssetAccountDeposit = ConstU128<DOLLARS>;
+	type MetadataDepositBase = MetadataDepositBase;
+	type MetadataDepositPerByte = MetadataDepositPerByte;
+	type ApprovalDeposit = ApprovalDeposit;
+	type StringLimit = StringLimit;
+	type Freezer = ();
+	type Extra = ();
+	type CallbackHandle = ();
+	type WeightInfo = pallet_assets::weights::SubstrateWeight<Runtime>;
+	type RemoveItemsLimit = ConstU32<1000>;
+	#[cfg(feature = "runtime-benchmarks")]
+	type BenchmarkHelper = ();
+}
+
+impl pallet_assets::Config for Runtime {
 	type RuntimeEvent = RuntimeEvent;
 	type Balance = u128;
 	type AssetId = u32;
@@ -2224,6 +2253,9 @@ mod runtime {
 	#[runtime::pallet_index(2)]
 	pub type Babe = pallet_babe;
 
+	#[runtime::pallet_index(21)]
+	pub type Liquidity = pallet_liquidity;
+
 	#[runtime::pallet_index(3)]
 	pub type Timestamp = pallet_timestamp;
 
@@ -2333,6 +2365,9 @@ mod runtime {
 
 	#[runtime::pallet_index(39)]
 	pub type Assets = pallet_assets<Instance1>;
+
+	#[runtime::pallet_index(80)]
+	pub type AAssets = pallet_assets;
 
 	#[runtime::pallet_index(40)]
 	pub type PoolAssets = pallet_assets<Instance2>;
