@@ -16,7 +16,7 @@ maintenance = { status = "deprecated" }
 targets = ["x86_64-unknown-linux-gnu"]
 
 [dependencies]
-sp-crypto-hashing = { path = "../../primitives/crypto/hashing" }
+sp-crypto-hashing = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
 
 [features]
 default = ["std"]
