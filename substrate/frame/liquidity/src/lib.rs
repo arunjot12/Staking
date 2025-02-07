@@ -15,7 +15,6 @@ use pallet_assets::{self as assets};
 use sp_runtime::traits::{AccountIdConversion, CheckedAdd, CheckedSub, StaticLookup};
 use sp_std::vec::Vec;
 type AccountIdLookupOf<T> = <<T as frame_system::Config>::Lookup as StaticLookup>::Source;
-pub use pallet_assets::TransferFlags;
 
 #[frame_support::pallet]
 pub mod pallet {
