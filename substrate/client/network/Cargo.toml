@@ -21,7 +21,7 @@ prost-build = "0.11"
 
 [dependencies]
 array-bytes = "6.1"
-async-channel = "1.8.0"
+async-channel = "2.3.0"
 async-trait = "0.1.79"
 asynchronous-codec = "0.6"
 bytes = "1"
