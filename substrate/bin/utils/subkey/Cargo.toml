@@ -21,4 +21,4 @@ name = "subkey"
 
 [dependencies]
 clap = { version = "4.5.3", features = ["derive"] }
-sc-cli = { path = "../../../client/cli" }
+sc-cli = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
