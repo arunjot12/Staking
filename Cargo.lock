@@ -2483,6 +2483,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "ed25519-zebra"
+version = "4.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7d9ce6874da5d4415896cd45ffbc4d1cfc0c4f9c079427bd870742c30f2f65a9"
+dependencies = [
+ "curve25519-dalek 4.1.2",
+ "ed25519 2.2.2",
+ "hashbrown 0.14.3",
+ "hex",
+ "rand_core 0.6.4",
+ "sha2 0.10.8",
+ "zeroize",
+]
+
+[[package]]
 name = "educe"
 version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -12223,7 +12238,7 @@ dependencies = [
  "bs58 0.5.0",
  "criterion 0.4.0",
  "dyn-clonable",
- "ed25519-zebra",
+ "ed25519-zebra 4.0.3",
  "futures",
  "hash-db",
  "hash256-std-hasher",
@@ -12269,7 +12284,7 @@ dependencies = [
  "array-bytes 6.2.3",
  "bitflags 1.3.2",
  "bounded-collections",
- "ed25519-zebra",
+ "ed25519-zebra 3.1.0",
  "hash-db",
  "hash256-std-hasher",
  "k256",
