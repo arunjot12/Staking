@@ -94,7 +94,6 @@ pallet-example-mbm = {  git = "https://github.com/paritytech/polkadot-sdk.git", 
 pallet-nis = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
 pallet-grandpa = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
 pallet-im-online = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
-pallet-liquidity =  { path = "../../../frame/liquidity", default-features = false }
 pallet-indices =  {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
 pallet-identity = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
 pallet-lottery =  {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
@@ -179,7 +178,6 @@ std = [
 	"pallet-authorship/std",
 	"pallet-babe/std",
 	"pallet-bags-list/std",
-	"pallet-liquidity/std",
 	"pallet-balances/std",
 	"pallet-beefy-mmr/std",
 	"pallet-beefy/std",
