@@ -109,7 +109,7 @@ pallet-im-online =  {  git = "https://github.com/paritytech/polkadot-sdk.git", b
 pallet-skip-feeless-payment ={  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
 
 # node-specific dependencies
-kitchensink-runtime = { path = "../../runtime" }
+kitchensink-runtime = { path = "../runtime" }
 node-primitives = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
 
 # CLI-specific dependencies

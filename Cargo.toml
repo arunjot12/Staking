@@ -10,10 +10,10 @@ resolver = "2"
 
 members = [
 	"node/bench",
-	"node/cli",
+	"node",
 	"runtime",
 ]
-default-members = ["node/cli"]
+default-members = ["node"]
 
 [workspace.lints.rust]
 suspicious_double_ref_op = { level = "allow", priority = 2 }
