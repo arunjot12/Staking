@@ -4143,7 +4143,7 @@ dependencies = [
  "frame-system-rpc-runtime-api",
  "frame-try-runtime",
  "log",
- "node-primitives 2.0.0",
+ "node-primitives",
  "pallet-alliance",
  "pallet-asset-conversion",
  "pallet-asset-conversion-ops",
@@ -4269,7 +4269,7 @@ dependencies = [
  "frame-system-rpc-runtime-api",
  "frame-try-runtime",
  "log",
- "node-primitives 2.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?branch=release-polkadot-v1.11.0)",
+ "node-primitives",
  "pallet-alliance",
  "pallet-asset-conversion",
  "pallet-asset-conversion-ops",
@@ -5736,7 +5736,7 @@ dependencies = [
  "kvdb-rocksdb",
  "lazy_static",
  "log",
- "node-primitives 2.0.0",
+ "node-primitives",
  "node-testing",
  "parity-db",
  "rand 0.8.5",
@@ -5760,14 +5760,6 @@ dependencies = [
 [[package]]
 name = "node-primitives"
 version = "2.0.0"
-dependencies = [
- "sp-core",
- "sp-runtime",
-]
-
-[[package]]
-name = "node-primitives"
-version = "2.0.0"
 source = "git+https://github.com/paritytech/polkadot-sdk.git?branch=release-polkadot-v1.11.0#8c8edacf8942298c3807a2e192860da9e7e4996a"
 dependencies = [
  "sp-core",
@@ -5777,45 +5769,11 @@ dependencies = [
 [[package]]
 name = "node-rpc"
 version = "3.0.0-dev"
-dependencies = [
- "jsonrpsee",
- "mmr-rpc",
- "node-primitives 2.0.0",
- "pallet-transaction-payment-rpc",
- "sc-chain-spec",
- "sc-client-api",
- "sc-consensus-babe",
- "sc-consensus-babe-rpc",
- "sc-consensus-beefy",
- "sc-consensus-beefy-rpc",
- "sc-consensus-grandpa",
- "sc-consensus-grandpa-rpc",
- "sc-mixnet",
- "sc-rpc",
- "sc-rpc-api",
- "sc-rpc-spec-v2",
- "sc-sync-state-rpc",
- "sc-transaction-pool-api",
- "sp-api",
- "sp-block-builder",
- "sp-blockchain",
- "sp-consensus",
- "sp-consensus-babe",
- "sp-keystore",
- "sp-runtime",
- "sp-statement-store",
- "substrate-frame-rpc-system",
- "substrate-state-trie-migration-rpc",
-]
-
-[[package]]
-name = "node-rpc"
-version = "3.0.0-dev"
 source = "git+https://github.com/paritytech/polkadot-sdk.git?branch=release-polkadot-v1.11.0#8c8edacf8942298c3807a2e192860da9e7e4996a"
 dependencies = [
  "jsonrpsee",
  "mmr-rpc",
- "node-primitives 2.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?branch=release-polkadot-v1.11.0)",
+ "node-primitives",
  "pallet-transaction-payment-rpc",
  "sc-chain-spec",
  "sc-client-api",
@@ -5854,7 +5812,7 @@ dependencies = [
  "futures",
  "kitchensink-runtime 3.0.0-dev (git+https://github.com/paritytech/polkadot-sdk.git?branch=release-polkadot-v1.11.0)",
  "log",
- "node-primitives 2.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?branch=release-polkadot-v1.11.0)",
+ "node-primitives",
  "pallet-asset-conversion",
  "pallet-asset-conversion-tx-payment",
  "pallet-asset-tx-payment",
@@ -11847,9 +11805,9 @@ dependencies = [
  "kitchensink-runtime 3.0.0-dev",
  "log",
  "mmr-gadget",
+ "mmr-rpc",
  "nix 0.26.2",
- "node-primitives 2.0.0",
- "node-rpc 3.0.0-dev",
+ "node-primitives",
  "node-testing",
  "pallet-asset-conversion-tx-payment",
  "pallet-asset-tx-payment",
@@ -11862,6 +11820,7 @@ dependencies = [
  "pallet-sudo",
  "pallet-timestamp",
  "pallet-transaction-payment",
+ "pallet-transaction-payment-rpc",
  "pallet-treasury",
  "parity-scale-codec",
  "platforms",
@@ -11876,9 +11835,12 @@ dependencies = [
  "sc-client-db",
  "sc-consensus",
  "sc-consensus-babe",
+ "sc-consensus-babe-rpc",
  "sc-consensus-beefy",
+ "sc-consensus-beefy-rpc",
  "sc-consensus-epochs",
  "sc-consensus-grandpa",
+ "sc-consensus-grandpa-rpc",
  "sc-consensus-slots",
  "sc-executor",
  "sc-keystore",
@@ -11889,6 +11851,8 @@ dependencies = [
  "sc-network-sync",
  "sc-offchain",
  "sc-rpc",
+ "sc-rpc-api",
+ "sc-rpc-spec-v2",
  "sc-service",
  "sc-service-test",
  "sc-statement-store",
@@ -11905,6 +11869,7 @@ dependencies = [
  "sp-api",
  "sp-application-crypto",
  "sp-authority-discovery",
+ "sp-block-builder",
  "sp-blockchain",
  "sp-consensus",
  "sp-consensus-babe",
@@ -11931,7 +11896,9 @@ dependencies = [
  "substrate-build-script-utils",
  "substrate-cli-test-utils",
  "substrate-frame-cli",
+ "substrate-frame-rpc-system",
  "substrate-rpc-client",
+ "substrate-state-trie-migration-rpc",
  "tempfile",
  "tokio",
  "tokio-util",
@@ -11957,8 +11924,8 @@ dependencies = [
  "kitchensink-runtime 3.0.0-dev (git+https://github.com/paritytech/polkadot-sdk.git?branch=release-polkadot-v1.11.0)",
  "log",
  "mmr-gadget",
- "node-primitives 2.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?branch=release-polkadot-v1.11.0)",
- "node-rpc 3.0.0-dev (git+https://github.com/paritytech/polkadot-sdk.git?branch=release-polkadot-v1.11.0)",
+ "node-primitives",
+ "node-rpc",
  "pallet-asset-conversion-tx-payment",
  "pallet-asset-tx-payment",
  "pallet-assets",
@@ -12255,7 +12222,7 @@ dependencies = [
  "assert_cmd",
  "futures",
  "nix 0.26.2",
- "node-primitives 2.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?branch=release-polkadot-v1.11.0)",
+ "node-primitives",
  "regex",
  "sc-cli",
  "sc-service",

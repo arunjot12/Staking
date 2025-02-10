@@ -11,8 +11,6 @@ resolver = "2"
 members = [
 	"node/bench",
 	"node/cli",
-	"node/primitives",
-	"node/rpc",
 	"runtime",
 ]
 default-members = ["node/cli"]

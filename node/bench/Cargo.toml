@@ -18,7 +18,7 @@ workspace = true
 array-bytes = "6.1"
 clap = { version = "4.5.3", features = ["derive"] }
 log = { workspace = true, default-features = true }
-node-primitives = { path = "../primitives" }
+node-primitives =  {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
 node-testing = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
 kitchensink-runtime = { path = "../../runtime" }
 sc-client-api = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
