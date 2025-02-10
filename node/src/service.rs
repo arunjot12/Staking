@@ -21,6 +21,7 @@
 //! Service implementation. Specialized wrapper over substrate service.
 
 use crate::Cli;
+use crate::rpc;
 use codec::Encode;
 use frame_benchmarking_cli::SUBSTRATE_REFERENCE_HARDWARE;
 use frame_system_rpc_runtime_api::AccountNonceApi;
