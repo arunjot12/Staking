@@ -109,14 +109,14 @@ pallet-im-online =  {  git = "https://github.com/paritytech/polkadot-sdk.git", b
 pallet-skip-feeless-payment ={  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
 
 # node-specific dependencies
-kitchensink-runtime = { path = "../runtime" }
+kitchensink-runtime = { path = "../../runtime" }
 node-rpc = { path = "../rpc" }
 node-primitives = { path = "../primitives" }
 
 # CLI-specific dependencies
 sc-cli = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false ,optional = true }
 frame-benchmarking-cli = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false , optional = true }
-node-inspect = { package = "staging-node-inspect", path = "../inspect", optional = true }
+node-inspect = { package = "staging-node-inspect",git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false, optional = true }
 serde_json = { workspace = true, default-features = true }
 
 [dev-dependencies]
@@ -147,7 +147,7 @@ substrate-cli-test-utils ={  git = "https://github.com/paritytech/polkadot-sdk.g
 
 wat = "1.0"
 frame-support = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
-node-testing = { path = "../testing" }
+node-testing = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
 pallet-balances = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
 pallet-glutton = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
 pallet-sudo = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false }
@@ -167,7 +167,7 @@ sp-state-machine ={  git = "https://github.com/paritytech/polkadot-sdk.git", bra
 [build-dependencies]
 clap = { version = "4.5.3", optional = true }
 clap_complete = { version = "4.0.2", optional = true }
-node-inspect = { package = "staging-node-inspect", path = "../inspect", optional = true }
+node-inspect = { package = "staging-node-inspect", git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false, optional = true }
 frame-benchmarking-cli = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false , optional = true }
 substrate-build-script-utils = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false ,optional = true }
 substrate-frame-cli = {  git = "https://github.com/paritytech/polkadot-sdk.git", branch = "release-polkadot-v1.11.0", default-features = false ,optional = true }

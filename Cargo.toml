@@ -9,19 +9,13 @@ homepage = "https://paritytech.github.io/polkadot-sdk/master/polkadot_sdk_docs/i
 resolver = "2"
 
 members = [
-	"substrate/bin/node/bench",
-	"substrate/bin/node/cli",
-	"substrate/bin/node/inspect",
-	"substrate/bin/node/primitives",
-	"substrate/bin/node/rpc",
-	"substrate/bin/node/runtime",
-	"substrate/bin/node/testing",
-	"substrate/bin/utils/chain-spec-builder",
-	"substrate/bin/utils/subkey",
-	"substrate/deprecated/hashing",
-	"substrate/deprecated/hashing/proc-macro",
+	"node/bench",
+	"node/cli",
+	"node/primitives",
+	"node/rpc",
+	"runtime",
 ]
-default-members = ["substrate/bin/node/cli"]
+default-members = ["node/cli"]
 
 [workspace.lints.rust]
 suspicious_double_ref_op = { level = "allow", priority = 2 }
